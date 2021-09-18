@@ -20,10 +20,14 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: houstonhackathon
+  password: <%= ENV['HOUSTON_HACKATHON_2021_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
-  database: houston_hackathon_2021_development
+  host: localhost
+
+  database: houstonhackathon_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +61,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: houston_hackathon_2021_test
+  host: localhost
+
+  database: houstonhackathon_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +87,5 @@ test:
 #
 production:
   <<: *default
-  database: houston_hackathon_2021_production
-  username: houston_hackathon_2021
-  password: <%= ENV['HOUSTON_HACKATHON_2021_DATABASE_PASSWORD'] %>
+  database: houstonhackathon_production
+
