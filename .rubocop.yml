@@ -1,0 +1,25 @@
+require:
+  - rubocop-rails
+
+Rails:
+  Enabled: true
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - script/**/*
+    - config/**/*
+    - Guardfile
+    
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - db/**/*
+Lint/MissingSuper:
+  Exclude:
+  - app/**/*
