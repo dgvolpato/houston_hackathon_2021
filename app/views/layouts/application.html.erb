@@ -11,6 +11,14 @@
   </head>
 
   <body>
+  <nav>
+      <%= link_to image_tag('wellcheck_logo', size: '120x100'), root_path %>
+			<% if user_signed_in? %>
+				<%= render 'shared/signed_in_nav' %>
+			<% else %>
+				<%= render 'shared/login_nav' %>
+			<% end %>
+		</nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
