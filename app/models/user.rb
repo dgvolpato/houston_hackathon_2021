@@ -3,10 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         
+
   enum role: {
-    'WellChecker' => 0,
-    'WellChecker Recipient' => 1,
-    'Organization' => 2
+    wellchecker: 'WellChecker',
+    wellchecker_recipient: 'WellChecker Recipient',
+    organization: 'Organization'
   }
 end

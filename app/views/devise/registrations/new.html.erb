@@ -5,15 +5,15 @@
 
   <div class="field">
     <%= f.label :first_name %><br />
-    <%= f.email_field :first_name, size: 20%>
+    <%= f.text_field :first_name, size: 20%>
   </div>
 
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.email_field :last_name, size: 20%>
+    <%= f.text_field :last_name, size: 20%>
   </div>
   <div class='field'>
-    <%= f.select(:role_number, [['WellChecker', 0], ['WellChecker Recipient', 1], ['Organization', 2]]) %>
+    <%= f.select(:role, [['WellChecker', :wellchecker], ['WellChecker Recipient', :wellchecker_recipient], ['Organization', :organization]]) %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
