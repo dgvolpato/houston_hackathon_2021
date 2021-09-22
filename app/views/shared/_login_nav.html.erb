@@ -4,9 +4,10 @@
         color: white;
         width: 60px;
         text-align:center;
-        border: 5px solid black;
+        border: 3px solid black;
         padding: 25px;
         margin: 20px;
+        border-radius: 15px;
     }
 
     .wc_grid {
@@ -14,8 +15,14 @@
         align-items: center; 
         justify-content: center;
     }
+
+    .wc_button_text {
+        color: white;
+        text-decoration: none;
+    }
+
 </style>
 <div class="wc_grid">
-    <div class="wc_button"><%= link_to "Register", new_user_registration_path  %></div>
-    <div class="wc_button"><%= link_to "Login", new_user_session_path  %></div>
+    <div class="wc_button"><%= link_to "Register", new_user_registration_path, {:style=>'color:#FFFFFF;', :class => "wc_button_text"}  %></div>
+    <div class="wc_button"><%= link_to "Login", new_user_session_path, {:style=>'color:#FFFFFF;', :class => "wc_button_text"}  %></div>
 </div>
