@@ -1,2 +1,21 @@
-<%= link_to "Sign up", new_user_registration_path  %>
-<%= link_to "Login", new_user_session_path  %>
+<style>
+    .wc_button {
+        background-color: red;
+        color: white;
+        width: 60px;
+        text-align:center;
+        border: 5px solid black;
+        padding: 25px;
+        margin: 20px;
+    }
+
+    .wc_grid {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+</style>
+<div class="wc_grid">
+    <div class="wc_button"><%= link_to "Register", new_user_registration_path  %></div>
+    <div class="wc_button"><%= link_to "Login", new_user_session_path  %></div>
+</div>
