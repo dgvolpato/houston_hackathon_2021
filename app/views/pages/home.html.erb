@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+    h3 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    pre {text-align: center;}
+    .center {
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 50%;
+            }
+  </style>
+    <title>HoustonHackathon2021</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav>
+      <%= link_to image_tag('wellcheck_logo', size: '360x300', class: 'center'), root_path %>
+      <h3> A Pre-Disaster Wellness Check Registry </h3>
+			<% if user_signed_in? %>
+				<%= render 'shared/signed_in_nav' %>
+			<% else %>
+				<%= render 'shared/login_nav' %>
+			<% end %>
+		</nav>
+
+    <p> Meet WellCheck: A unified pre-disaster wellness check registry for dynamic disaster response in real-time </p>
+    <pre>
+
+
+     During Hurricane Ida, there were more deaths from heat than from flooding.
+     Vulnerable residents, such as low-income minority renters without access to air
+     conditioning or means of evacuation, were more likely to die from heat during
+     the extended power outages due to the storm. A wellness check registry could
+     have prevented these deaths. Though there are many disaster response apps, like
+     Crowdsource Rescue, there are no pre-disaster registries to link vulnerable
+     residents to those who can provide wellness checks should a disaster occur.
+    </pre>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
